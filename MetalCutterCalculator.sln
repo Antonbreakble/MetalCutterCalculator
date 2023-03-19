@@ -1,0 +1,44 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MetalCutterCalculator", "MetalCutterCalculator\MetalCutterCalculator\MetalCutterCalculator.csproj", "{B0708ED3-5074-4F7B-A35F-B58543D45760}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MetalCutterCalculator.Android", "MetalCutterCalculator\MetalCutterCalculator.Android\MetalCutterCalculator.Android.csproj", "{B00F4286-7A10-45FF-8F28-9E39AC05F8DF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MetalCutterCalculator.Desktop", "MetalCutterCalculator\MetalCutterCalculator.Desktop\MetalCutterCalculator.Desktop.csproj", "{174E4953-2816-440A-9059-709382058C7A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MetalCutterCalculator.iOS", "MetalCutterCalculator\MetalCutterCalculator.iOS\MetalCutterCalculator.iOS.csproj", "{7E0DF26C-97F6-41EE-980C-E0A09D0ABC22}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MetalCutterCalculator.Web", "MetalCutterCalculator\MetalCutterCalculator.Web\MetalCutterCalculator.Web.csproj", "{C06D6296-B12F-4263-B34A-A5EF8A25E8B2}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B0708ED3-5074-4F7B-A35F-B58543D45760}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B0708ED3-5074-4F7B-A35F-B58543D45760}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B0708ED3-5074-4F7B-A35F-B58543D45760}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B0708ED3-5074-4F7B-A35F-B58543D45760}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B00F4286-7A10-45FF-8F28-9E39AC05F8DF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B00F4286-7A10-45FF-8F28-9E39AC05F8DF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B00F4286-7A10-45FF-8F28-9E39AC05F8DF}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{B00F4286-7A10-45FF-8F28-9E39AC05F8DF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B00F4286-7A10-45FF-8F28-9E39AC05F8DF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B00F4286-7A10-45FF-8F28-9E39AC05F8DF}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{174E4953-2816-440A-9059-709382058C7A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{174E4953-2816-440A-9059-709382058C7A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{174E4953-2816-440A-9059-709382058C7A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{174E4953-2816-440A-9059-709382058C7A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7E0DF26C-97F6-41EE-980C-E0A09D0ABC22}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7E0DF26C-97F6-41EE-980C-E0A09D0ABC22}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7E0DF26C-97F6-41EE-980C-E0A09D0ABC22}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{7E0DF26C-97F6-41EE-980C-E0A09D0ABC22}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7E0DF26C-97F6-41EE-980C-E0A09D0ABC22}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7E0DF26C-97F6-41EE-980C-E0A09D0ABC22}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{C06D6296-B12F-4263-B34A-A5EF8A25E8B2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C06D6296-B12F-4263-B34A-A5EF8A25E8B2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C06D6296-B12F-4263-B34A-A5EF8A25E8B2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C06D6296-B12F-4263-B34A-A5EF8A25E8B2}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

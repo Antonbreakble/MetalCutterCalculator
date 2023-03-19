@@ -6,9 +6,9 @@ using Metsys.Bson;
 namespace MetalCutterCalculator.ViewModels.UserControls; 
 
 public partial class  OrderParametersViewModel : ObservableObject {
-    [ObservableProperty] private double _metalLenght;
-    [ObservableProperty] private double _metalWidth;
-    [ObservableProperty] private double _metalThickness;
+    [ObservableProperty] private uint _metalLenght;
+    [ObservableProperty] private uint _metalWidth;
+    [ObservableProperty] private uint _metalThickness;
     [ObservableProperty] private uint _detailsNumber;
     [ObservableProperty] private double _cuttingLength;
     [ObservableProperty] private uint _metalInserts;
@@ -16,13 +16,13 @@ public partial class  OrderParametersViewModel : ObservableObject {
 
     public OrderParameters GetOrderParameters() {
         return new() {
-            DetailsNumber = _detailsNumber,
-            CuttingLength = _cuttingLength,
-            MetalBends = _metalBends,
-            Thickness = _metalThickness,
-            MetalInserts = _metalInserts,
-            Lenght = _metalLenght,
-            Width = _metalWidth
+            DetailsNumber = DetailsNumber,
+            CuttingLength = CuttingLength,
+            MetalBends = MetalBends,
+            Thickness = MetalThickness,
+            MetalInserts = MetalInserts,
+            Lenght = MetalLenght,
+            Width = MetalWidth
         };
     }
 }

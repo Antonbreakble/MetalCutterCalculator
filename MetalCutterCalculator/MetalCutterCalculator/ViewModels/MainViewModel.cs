@@ -12,6 +12,7 @@ namespace MetalCutterCalculator.ViewModels {
         private readonly ICuttingCalculationService _cuttingCalculationService;
 
         [ObservableProperty] private OrderParametersViewModel _orderParametersViewModel = new();
+        [ObservableProperty] private OrderCalculationViewModel _orderCalculationViewModel = new();
 
         public MainViewModel(ICuttingCalculationService cuttingCalculationService) {
             _cuttingCalculationService = cuttingCalculationService;
@@ -19,7 +20,8 @@ namespace MetalCutterCalculator.ViewModels {
         
         [RelayCommand]
         private void CalculateOrder() {
-            var orderCalculation = _cuttingCalculationService.CalculateOrderByOrderParameters(_orderParametersViewModel.GetOrderParameters());
+            var orderCalculation = _cuttingCalculationService.CalculateOrderByOrderParameters(OrderParametersViewModel.GetOrderParameters());
+            OrderCalculationViewModel.CalculationUpdate(orderCalculation);
         }
     }
 }

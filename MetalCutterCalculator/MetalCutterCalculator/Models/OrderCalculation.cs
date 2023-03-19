@@ -1,7 +1,7 @@
 ﻿namespace MetalCutterCalculator.Models; 
 
 public class OrderCalculation {
-    public double GetSquare { get; set; }
+    public double Square { get; set; }
     public double Mass { get; set; }
     public double MetalCost { get; set; }
     public double CuttingCost { get; set; }

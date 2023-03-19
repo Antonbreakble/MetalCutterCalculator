@@ -1,0 +1,68 @@
+﻿<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:viewModels="clr-namespace:MetalCutterCalculator.ViewModels.UserControls"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+             x:Class="MetalCutterCalculator.Views.UserControls.OrderCalculationView">
+    <Design.DataContext>
+        <viewModels:OrderCalculationViewModel />
+    </Design.DataContext>
+    <Grid RowDefinitions="Auto, *">
+        <TextBlock Text="Расчёт" 
+                   HorizontalAlignment="Center"
+                   Margin="8"
+                   FontSize="24"></TextBlock>
+        <StackPanel Grid.Row="1"
+                    Margin="32,16">
+            <Grid ColumnDefinitions="*,*"
+                  Margin="8,8">
+                <TextBlock Text="Площадь металла:"/>
+                <TextBlock Grid.Column="1" Text="{Binding Square, StringFormat='{}{0} м²'}"
+                           HorizontalAlignment="Right"/>
+            </Grid>
+            <Grid ColumnDefinitions="*,*"
+                  Margin="8,8">
+                <TextBlock Text="Масса металла:"/>
+                <TextBlock Grid.Column="1" Text="{Binding Mass, StringFormat='{}{0} кг'}"
+                           HorizontalAlignment="Right"/>
+            </Grid>
+            <Grid ColumnDefinitions="*,*"
+                  Margin="8,8">
+                <TextBlock Text="Стоимость металла:"/>
+                <TextBlock Grid.Column="1" Text="{Binding MetalCost, StringFormat='{}{0} руб'}"
+                           HorizontalAlignment="Right"/>
+            </Grid>
+            <Grid ColumnDefinitions="*,*"
+                  Margin="8,8">
+                <TextBlock Text="Стоимость лазерной резки:"/>
+                <TextBlock Grid.Column="1" Text="{Binding CuttingCost, StringFormat='{}{0} руб'}"
+                           HorizontalAlignment="Right"/>
+            </Grid>
+            <Grid ColumnDefinitions="*,*"
+                  Margin="8,8">
+                <TextBlock Text="Стоимость вставки:"/>
+                <TextBlock Grid.Column="1" Text="{Binding MetalInsertsCost, StringFormat='{}{0} руб'}"
+                           HorizontalAlignment="Right"/>
+            </Grid>
+            <Grid ColumnDefinitions="*,*"
+                  Margin="8,8">
+                <TextBlock Text="Стоимость гибки:"/>
+                <TextBlock Grid.Column="1" Text="{Binding BendingCost, StringFormat='{}{0} руб'}"
+                           HorizontalAlignment="Right"/>
+            </Grid>
+            <Grid ColumnDefinitions="*,*"
+                  Margin="8,8">
+                <TextBlock Text="Стоимость с нашим металлом:"/>
+                <TextBlock Grid.Column="1" Text="{Binding CostWithInnerMetal, StringFormat='{}{0} руб'}"
+                           HorizontalAlignment="Right"/>
+            </Grid>
+            <Grid ColumnDefinitions="*,*"
+                  Margin="8,8">
+                <TextBlock Text="Стоимость с металлом заказчика:"/>
+                <TextBlock Grid.Column="1" Text="{Binding CostWithOuterMetal, StringFormat='{}{0} руб'}"
+                           HorizontalAlignment="Right"/>
+            </Grid>
+        </StackPanel>
+    </Grid>
+</UserControl>

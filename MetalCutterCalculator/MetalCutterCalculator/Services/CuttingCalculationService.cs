@@ -17,7 +17,7 @@ public class CuttingCalculationService : ICuttingCalculationService {
 
     public OrderCalculation CalculateOrderByOrderParameters(OrderParameters orderParameters) {
         return new OrderCalculation {
-            GetSquare = GetSquare(orderParameters),
+            Square = GetSquare(orderParameters),
             Mass = GetMass(orderParameters),
             MetalCost = GetMetalCost(orderParameters),
             CuttingCost = GetCuttingCost(orderParameters),
@@ -60,11 +60,11 @@ public class CuttingCalculationService : ICuttingCalculationService {
     private double GetCuttingCost(OrderParameters orderParameters) {
         var cuttingPrice = double.MaxValue;
         for (var i = 0; i < _list.Length; ++i) {
-            cuttingPrice = Math.Abs(orderParameters.Thickness - _list[i]) switch {
-                < 0.1f when orderParameters.CuttingLength <= 100 => _priceListForShort[i],
-                < 0.1f when orderParameters.CuttingLength > 100 => _priceListForLong[i],
-                _ => cuttingPrice
-            };
+            if (orderParameters.Thickness == _list[i] && orderParameters.CuttingLength <= 100) {
+                cuttingPrice = _priceListForShort[i];
+            }else if (orderParameters.Thickness == _list[i] && orderParameters.CuttingLength > 100) {
+                cuttingPrice = _priceListForLong[i];
+            }
         }
 
         var capitalismThings = cuttingPrice * orderParameters.CuttingLength;

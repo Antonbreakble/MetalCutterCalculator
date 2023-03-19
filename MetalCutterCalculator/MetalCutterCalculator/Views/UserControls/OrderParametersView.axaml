@@ -8,34 +8,43 @@
     <Design.DataContext>
         <viewModels:OrderParametersViewModel />
     </Design.DataContext>
-    <StackPanel Orientation="Vertical">
-        <StackPanel Margin="8,4">
-            <TextBlock Text="Длина (мм)"></TextBlock>
-            <NumericUpDown Value="{Binding MetalLenght}"></NumericUpDown>
+    <Grid RowDefinitions="Auto, *">
+        <TextBlock Text="Параметры заказа" 
+                   HorizontalAlignment="Center"
+                   Margin="8"
+                   FontSize="24"></TextBlock>
+        <StackPanel Orientation="Vertical"
+                    Grid.Row="1"
+                    Margin="32,0">
+            <StackPanel Margin="8,4">
+                <TextBlock Text="Длина (мм)" Margin="0,0,0,4"></TextBlock>
+                <NumericUpDown Value="{Binding MetalLenght}"></NumericUpDown>
+            </StackPanel>
+            <StackPanel Margin="8,4">
+                <TextBlock Text="Ширина (мм)" Margin="0,0,0,4"></TextBlock>
+                <NumericUpDown Value="{Binding MetalWidth}"></NumericUpDown>
+            </StackPanel>
+            <StackPanel Margin="8,4">
+                <TextBlock Text="Толщина (мм)" Margin="0,0,0,4"></TextBlock>
+                <NumericUpDown Value="{Binding MetalThickness}"></NumericUpDown>
+            </StackPanel>
+            <StackPanel Margin="8,4">
+                <TextBlock Text="Кол-во деталей (шт)" Margin="0,0,0,4"></TextBlock>
+                <NumericUpDown Value="{Binding DetailsNumber}"></NumericUpDown>
+            </StackPanel>
+            <StackPanel Margin="8,4">
+                <TextBlock Text="Длина резки (м/п)" Margin="0,0,0,4"></TextBlock>
+                <NumericUpDown Value="{Binding CuttingLength}"></NumericUpDown>
+            </StackPanel>
+            <StackPanel Margin="8,4">
+                <TextBlock Text="Кол-во вставок (шт)" Margin="0,0,0,4"></TextBlock>
+                <NumericUpDown Value="{Binding MetalInserts}"></NumericUpDown>
+            </StackPanel>
+            <StackPanel Margin="8,4">
+                <TextBlock Text="Кол-во гибов (шт)" Margin="0,0,0,4"></TextBlock>
+                <NumericUpDown Value="{Binding MetalBends}"></NumericUpDown>
+            </StackPanel>
         </StackPanel>
-        <StackPanel Margin="8,4">
-            <TextBlock Text="Ширина (мм)"></TextBlock>
-            <NumericUpDown Value="{Binding MetalWidth}"></NumericUpDown>
-        </StackPanel>
-        <StackPanel Margin="8,4">
-            <TextBlock Text="Толщина (мм)"></TextBlock>
-            <NumericUpDown Value="{Binding MetalThickness}"></NumericUpDown>
-        </StackPanel>
-        <StackPanel Margin="8,4">
-            <TextBlock Text="Кол-во деталей (шт)"></TextBlock>
-            <NumericUpDown Value="{Binding DetailsNumber}"></NumericUpDown>
-        </StackPanel>
-        <StackPanel Margin="8,4">
-            <TextBlock Text="Длина резки (м/п)"></TextBlock>
-            <NumericUpDown Value="{Binding CuttingLength}"></NumericUpDown>
-        </StackPanel>
-        <StackPanel Margin="8,4">
-            <TextBlock Text="Кол-во вставок (шт)"></TextBlock>
-            <NumericUpDown Value="{Binding MetalInserts}"></NumericUpDown>
-        </StackPanel>
-        <StackPanel Margin="8,4">
-            <TextBlock Text="Кол-во гибов (шт)"></TextBlock>
-            <NumericUpDown Value="{Binding MetalBends}"></NumericUpDown>
-        </StackPanel>
-    </StackPanel>
+    </Grid>
+
 </UserControl>

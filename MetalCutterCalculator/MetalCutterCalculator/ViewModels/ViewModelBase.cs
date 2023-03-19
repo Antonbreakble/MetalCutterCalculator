@@ -1,6 +1,7 @@
-﻿using ReactiveUI;
+﻿using CommunityToolkit.Mvvm.ComponentModel;
+
 
 namespace MetalCutterCalculator.ViewModels {
-    public class ViewModelBase : ReactiveObject {
+    public class ViewModelBase : ObservableObject {
     }
 }

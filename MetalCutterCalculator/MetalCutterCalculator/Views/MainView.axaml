@@ -2,6 +2,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:uc="using:MetalCutterCalculator.Views.UserControls"
              xmlns:viewModels="clr-namespace:MetalCutterCalculator.ViewModels"
              mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
              x:Class="MetalCutterCalculator.Views.MainView"
@@ -10,6 +11,14 @@
   <Design.DataContext>
     <viewModels:MainViewModel />
   </Design.DataContext>
-
-  <TextBlock Text="{Binding Greeting}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+    
+    <Grid ColumnDefinitions="*,*" Margin="8">
+        <Grid RowDefinitions="*, Auto">
+            <uc:OrderParametersView 
+                DataContext="{Binding OrderParametersViewModel}"/>
+            <Button Grid.Row="1"
+                    Content="Расчитать"
+                    Command="{Binding CalculateOrderCommand}"/>
+        </Grid>
+    </Grid>
 </UserControl>
